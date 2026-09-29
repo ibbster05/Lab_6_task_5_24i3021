@@ -15,21 +15,7 @@ import streamlit as st
 # Graphs from the lab tasks (same coordinates / edges as in the notebook)
 # ---------------------------------------------------------------------------
 NETWORKS = {
-    "Airport Baggage Handling (Task 2)": {
-        "locations": {
-            "Baggage_Area": (0, 0), "Security": (2, 1), "Checkpoint": (1, 4),
-            "Food_Court": (4, 2), "Terminal_Hall": (5, 5), "Departure_Gate": (8, 6),
-        },
-        "graph": {
-            "Baggage_Area": {"Security": 2.2, "Checkpoint": 4.1},
-            "Security": {"Food_Court": 2.2},
-            "Checkpoint": {"Terminal_Hall": 5.0},
-            "Food_Court": {"Terminal_Hall": 3.2, "Departure_Gate": 6.0},
-            "Terminal_Hall": {"Departure_Gate": 3.2},
-            "Departure_Gate": {},
-        },
-        "start": "Baggage_Area", "goal": "Departure_Gate",
-    },
+
     "Hospital Supply Robot (Task 3)": {
         "locations": {
             "Pharmacy": (0, 0), "Main_Corridor": (2, 1), "Patient_Wing": (1, 4),
@@ -44,36 +30,6 @@ NETWORKS = {
             "Emergency_Ward": {},
         },
         "start": "Pharmacy", "goal": "Emergency_Ward",
-    },
-    "Warehouse Robot (Task 1)": {
-        "locations": {
-            "Receiving_Area": (0, 0), "Storage_A": (2, 1), "Storage_B": (1, 4),
-            "Sorting_Area": (4, 2), "Inspection_Area": (5, 5), "Packing_Station": (7, 6),
-        },
-        "graph": {
-            "Receiving_Area": {"Storage_A": 2.2, "Storage_B": 4.1},
-            "Storage_A": {"Sorting_Area": 2.2},
-            "Storage_B": {"Inspection_Area": 5.0, "Sorting_Area": 6.0},
-            "Sorting_Area": {"Inspection_Area": 3.2, "Packing_Station": 5.0},
-            "Inspection_Area": {"Packing_Station": 2.2},
-            "Packing_Station": {},
-        },
-        "start": "Receiving_Area", "goal": "Packing_Station",
-    },
-    "Delivery Drone (Task 4)": {
-        "locations": {
-            "Distribution_Center": (0, 0), "Zone_A": (2, 1), "Zone_B": (1, 4),
-            "Zone_C": (4, 2), "Zone_D": (5, 5), "Customer_Building": (8, 6),
-        },
-        "graph": {
-            "Distribution_Center": {"Zone_A": 2.2, "Zone_B": 3.0},
-            "Zone_A": {"Zone_C": 2.2},
-            "Zone_B": {"Zone_D": 5.0},
-            "Zone_C": {"Zone_D": 3.2, "Customer_Building": 6.0},
-            "Zone_D": {"Customer_Building": 3.2},
-            "Customer_Building": {},
-        },
-        "start": "Distribution_Center", "goal": "Customer_Building",
     },
 }
 
